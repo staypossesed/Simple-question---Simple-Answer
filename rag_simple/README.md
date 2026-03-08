@@ -1,31 +1,32 @@
-# RAG Portfolio App
+# RAG 2026 — Production-ready
 
-Работает **без OpenAI кредитов**:
-- **Embeddings** — локально (HuggingFace), бесплатно
-- **LLM** — Groq (бесплатно) или OpenAI
+**Hybrid Search** (FAISS + BM25) · **BGE Reranker** · **Groq/OpenAI**
 
-## 1. Получи бесплатный Groq API ключ
+## Возможности
 
-1. Зайди на https://console.groq.com/keys
-2. Зарегистрируйся (Google/GitHub)
-3. Создай API ключ
-4. Добавь в `../.env`:
-   ```
-   GROQ_API_KEY=gsk_твой_ключ
-   ```
+- **Hybrid Retrieval** — семантика (FAISS) + ключевые слова (BM25), RRF
+- **Reranking** — BGE v2-m3, локально
+- **Улучшенный чанкинг** — 800 токенов, overlap 100
+- **Источники** — показ документов, использованных для ответа
+- **RAGAS** — скрипт оценки качества (`python eval_rag.py`)
 
-## 2. Запуск
+## Запуск
 
 ```powershell
-cd d:\Downloads\portfolio-rag-app\rag_simple
+cd rag_simple
 pip install -r requirements.txt
 python -m streamlit run ui.py
 ```
 
 Открой http://localhost:8501
 
-При первом запуске скачается модель embeddings (~90 MB) — подожди 1–2 минуты.
+## API ключи (.env)
+
+- **GROQ_API_KEY** — бесплатно, https://console.groq.com/keys
+- **OPENAI_API_KEY** — альтернатива
 
 ## Документы
 
 Клади `.txt` или `.pdf` в папку `../data/`
+
+При первом запуске скачаются модели (~90 MB embeddings, ~2.3 GB reranker).
