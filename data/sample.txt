@@ -1,0 +1,19 @@
+# Sample Document for RAG Portfolio
+
+This is a sample text document. You can add PDF, DOCX, or TXT files to the data/ folder.
+
+## What is RAG?
+
+RAG stands for Retrieval-Augmented Generation. It combines:
+1. A vector database (embeddings of your documents)
+2. An LLM (like GPT) to generate answers
+3. Real-time indexing — when you add new files, they are automatically indexed
+
+## How to use this app
+
+1. Add your documents to the data/ folder
+2. Wait for indexing (check the sidebar)
+3. Ask questions in natural language
+4. The app will find relevant chunks and generate answers
+
+The Pathway framework handles all the complexity: parsing, chunking, embedding, and incremental updates.

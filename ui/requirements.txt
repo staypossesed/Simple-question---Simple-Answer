@@ -1,0 +1,3 @@
+streamlit>=1.37.0
+python-dotenv>=1.0.0
+pathway[llm]>=2024.12.0
