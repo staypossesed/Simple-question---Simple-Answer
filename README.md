@@ -66,3 +66,7 @@ docker compose up
 ---
 
 Based on [Pathway llm-app](https://github.com/pathwaycom/llm-app) template.
+
+---
+
+**Simple Question — Simple Answer** | [GitHub](https://github.com/staypossesed/Simple-question---Simple-Answer)
